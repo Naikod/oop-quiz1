@@ -36,10 +36,8 @@ public class Order {
     public double getFinalTotal(){
         double total = getTotal();
         double discount = 0;
-        if(total > 100000){
+        if(total >= 100000){
             discount = total * 0.1;
-        } else if(total > 50000){
-            discount = total * 0.05;
         }
         return total - discount;
     }
